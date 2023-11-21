@@ -37,6 +37,8 @@ export const login = async (req: express.Request, res: express.Response) => {
   }
 };
 
+
+//create a New User
 export const register = async (req: express.Request, res: express.Response) => {
   try {
     const { email, password, username } = req.body; //extracting data from our body
@@ -64,6 +66,9 @@ export const register = async (req: express.Request, res: express.Response) => {
     });
 
     return res.status(200).json({"User Created Successfully":user}).end();
+
+
+
   } catch (error) {
     console.log(error);
     return res.sendStatus(400);
