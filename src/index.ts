@@ -5,6 +5,8 @@ import cookieParser from 'cookie-parser';
 import compression from 'compression';
 import cors from 'cors';
 
+import mongoose from 'mongoose';
+
 const app =express();
 app.use(cors({
     credentials:true,
@@ -23,3 +25,8 @@ server.listen(8080,()=>{
 
 
 const MONGODB_URL = "mongodb+srv://neeraj-gs:A3EHziMcpdIJ70lx@rest-api.5iwg3sr.mongodb.net/?retryWrites=true&w=majority"
+
+mongoose.Promise = Promise; //glbal js promise
+mongoose.connect(MONGODB_URL);
+mongoose.connection.on('error',(error:Error) => console.log(console.error()));
+
