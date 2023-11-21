@@ -10,3 +10,6 @@ const UserSchema = new mongoose.Schema({
         sessionToken: {type: "string",select:false}
     }
 })
+
+//model 
+export const UserModel = mongoose.model("User", UserSchema)
