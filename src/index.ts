@@ -19,3 +19,7 @@ const server = http.createServer(app);
 server.listen(8080,()=>{
     console.log('Server Running on http://localhost:8080');
 })
+
+
+
+const MONGODB_URL = "mongodb+srv://neeraj-gs:A3EHziMcpdIJ70lx@rest-api.5iwg3sr.mongodb.net/?retryWrites=true&w=majority"
