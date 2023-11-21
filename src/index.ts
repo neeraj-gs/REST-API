@@ -6,6 +6,7 @@ import compression from 'compression';
 import cors from 'cors';
 
 import mongoose from 'mongoose';
+import router from 'router';
 
 const app =express();
 app.use(cors({
@@ -30,3 +31,4 @@ mongoose.Promise = Promise; //glbal js promise
 mongoose.connect(MONGODB_URL);
 mongoose.connection.on('error',(error:Error) => console.log(console.error()));
 
+app.use('/',router)
