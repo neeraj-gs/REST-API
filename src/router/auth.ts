@@ -1,8 +1,9 @@
 import express from 'express';
 
-import { register } from '../controllers/auth';
+import {login, register } from '../controllers/auth';
 
 export default (router: express.Router) => {
   router.post('/auth/register', register);
-  // router.post('/auth/login', login);
+  router.post('/auth/login', login);
 };
+//after login we also see a cookie
