@@ -25,7 +25,7 @@ server.listen(8080,()=>{
 
 
 
-const MONGODB_URL = "mongodb+srv://neeraj-gs:A3EHziMcpdIJ70lx@rest-api.5iwg3sr.mongodb.net/?retryWrites=true&w=majority"
+const MONGODB_URL = process.env.MONGODB_URL
 
 mongoose.Promise = Promise; //glbal js promise
 mongoose.connect(MONGODB_URL);
